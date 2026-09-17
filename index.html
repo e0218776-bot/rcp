@@ -1,1 +1,71 @@
 
+<form id="leadForm" onsubmit="enviarFormulario(event)" class="space-y-4">
+  <div>
+    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Nombre Completo</label>
+    <input type="text" id="nombre" required placeholder="Ej. Carlos Mendoza" 
+      class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:border-teal-400 outline-none text-slate-100">
+  </div>
+
+  <div>
+    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Correo Electrónico</label>
+    <input type="email" id="email" required placeholder="tu@correo.com" 
+      class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:border-teal-400 outline-none text-slate-100">
+  </div>
+
+  <!-- TELÉFONO CON CÓDIGO DE PAÍS COMBINADO -->
+  <div>
+    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">WhatsApp / Teléfono</label>
+    <div class="flex gap-2">
+      <!-- Selector de Código de País -->
+      <select id="codigoPais" required class="w-1/3 bg-slate-900 border border-slate-700 rounded-xl px-2 py-3 text-xs focus:border-teal-400 outline-none text-slate-200">
+        <optgroup label="Más comunes">
+          <option value="+52" selected>🇲🇽 +52 (México)</option>
+          <option value="+1">🇺🇸/🇨🇦 +1 (USA/Canadá)</option>
+          <option value="+34">🇪🇸 +34 (España)</option>
+          <option value="+57">🇨🇴 +57 (Colombia)</option>
+          <option value="+54">🇦🇷 +54 (Argentina)</option>
+          <option value="+56">🇨🇱 +56 (Chile)</option>
+        </optgroup>
+        <optgroup label="Todos los países">
+          <option value="+49">🇩🇪 +49 (Alemania)</option>
+          <option value="+54">🇦🇷 +54 (Argentina)</option>
+          <option value="+61">🇦🇺 +61 (Australia)</option>
+          <option value="+43">🇦🇹 +43 (Austria)</option>
+          <option value="+32">🇧🇪 +32 (Bélgica)</option>
+          <option value="+55">🇧🇷 +55 (Brasil)</option>
+          <option value="+506">🇨🇷 +506 (Costa Rica)</option>
+          <option value="+593">🇪🇨 +593 (Ecuador)</option>
+          <option value="+33">🇫🇷 +33 (Francia)</option>
+          <option value="+502">🇬🇹 +502 (Guatemala)</option>
+          <option value="+39">🇮🇹 +39 (Italia)</option>
+          <option value="+507">🇵🇦 +507 (Panamá)</option>
+          <option value="+51">🇵🇪 +51 (Perú)</option>
+          <option value="+44">🇬🇧 +44 (Reino Unido)</option>
+          <option value="+41">🇨🇭 +41 (Suiza)</option>
+          <option value="+598">🇺🇾 +598 (Uruguay)</option>
+        </optgroup>
+      </select>
+
+      <!-- Número local -->
+      <input type="tel" id="numeroTelefono" required placeholder="984 123 4567" 
+        class="w-2/3 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:border-teal-400 outline-none text-slate-100">
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-xs font-semibold uppercase text-slate-400 mb-1">Activo de Interés</label>
+    <select id="tipoActivo" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm focus:border-teal-400 outline-none text-slate-200">
+      <option value="" disabled selected>Selecciona una categoría</option>
+      <option value="Hoteles">Hoteles</option>
+      <option value="Centros Comerciales">Centros Comerciales</option>
+      <option value="Residenciales">Residenciales</option>
+      <option value="Terrenos">Terrenos / Macrolotes</option>
+      <option value="Casas">Casas & Villas</option>
+      <option value="Apartamentos">Apartamentos</option>
+    </select>
+  </div>
+
+  <button type="submit" id="btnSubmit" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm uppercase tracking-wider py-3.5 rounded-xl transition">
+    Solicitar Acceso a Inventario Confidencial
+  </button>
+</form>
